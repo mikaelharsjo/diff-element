@@ -20,7 +20,7 @@
     "/tests/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer: ~0",
+    "polymer": "~0.5",
     "google-diff-match-patch": "~0"
   },
   "devDependencies": {
