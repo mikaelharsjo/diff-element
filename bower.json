@@ -20,8 +20,8 @@
     "/tests/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer: ~0.5",
-    "google-diff-match-patch": "~0.1"
+    "polymer": "Polymer/polymer: ~0",
+    "google-diff-match-patch": "~0"
   },
   "devDependencies": {
     "web-component-tester": "*"
