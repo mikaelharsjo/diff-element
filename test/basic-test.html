@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>diff-element</title>
+
+  <script src="../../webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <!-- Step 1: import the element to test -->
+  <link rel="import" href="../diff-element.html">
+</head>
+<body>
+
+  <!-- You use the document as a place to set up your fixtures. -->
+  <diff-element></diff-element>
+
+  <script>
+    var myEl = document.querySelector('diff-element');
+
+    suite('<diff-element>', function() {
+
+      test('defines the "first" property, empty by default', function() {
+        assert.equal(myEl.first, '');
+      });
+
+      test('defines the "second" property, empty by default', function() {
+        assert.equal(myEl.second, '');
+      });
+
+    });
+  </script>
+
+</body>
+</html>
