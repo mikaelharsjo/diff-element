@@ -3,7 +3,7 @@
 
 Element that shows diffs between two texts. Built with [Polymer](https://www.polymer-project.org) and powered by  [google_diff_match_patch](https://code.google.com/p/google-diff-match-patch/).
 
-See the [component page](http://mikaelharssjo.github.io/diff-element) for more information.
+See the [component page](http://mikaelharsjo.github.io/diff-element) for more information.
 
 ## Usage
 ```html
