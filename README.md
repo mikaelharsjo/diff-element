@@ -13,6 +13,8 @@ See the [component page](http://mikaelharssjo.github.io/diff-element) for more i
 </diff-element>
 ```
 
+![screenshot](screenshot.png)
+
 ## Contributing
 
 Start a simple web server that ships with Python, using the commands:
