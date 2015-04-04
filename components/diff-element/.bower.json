@@ -1,0 +1,38 @@
+{
+  "name": "diff-element",
+  "authors": [
+    "Anonymous <mikaelharsjo@gmail.com>"
+  ],
+  "description": "Element that shows diffs between two texts using google_diff_match_patch",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "diff",
+    "google_diff_match_patch"
+  ],
+  "main": "diff-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/mikaelharsjo/diff-element/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "~0.5",
+    "google-diff-match-patch": "~0"
+  },
+  "devDependencies": {
+    "web-component-tester": "*"
+  },
+  "_release": "79ef82f18f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "79ef82f18f091c4823750bf7318b8ca91e0e551e"
+  },
+  "_source": "git://github.com/mikaelharsjo/diff-element.git",
+  "_target": "master",
+  "_originalSource": "mikaelharsjo/diff-element",
+  "_direct": true
+}

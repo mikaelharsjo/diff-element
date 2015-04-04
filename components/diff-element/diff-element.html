@@ -1,0 +1,69 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../google-diff-match-patch/diff_match_patch.js"></script>
+
+<!--
+Element that shows diffs between two texts using `googel_diff_match_patch`.
+
+##### Example
+
+    <diff-element first="Good Dog" second="Bad Dog"></diff-element>
+
+@element diff-element
+@blurb Element that shows diffs between two texts using `google_diff_match_patch`.
+@status alpha
+@homepage http://mikaelharsjo.github.io/diff-element
+-->
+<polymer-element name="diff-element" attributes="first second">
+
+  <template>
+
+    <link rel="stylesheet" href="diff-element.css">
+
+    <content></content>
+
+    <template repeat="{{diff in diffs}}">
+      <template if="{{diff[0] === 0}}"> <!-- equality -->
+        {{diff[1]}}
+      </template>
+      <template if="{{diff[0] === -1}}"> <!-- deletion -->
+        <del>{{diff[1]}}</del>
+      </template>
+      <template if="{{diff[0] === 1}}"> <!-- insertion -->
+        <ins>{{diff[1]}}</ins>
+      </template>
+    </template>
+
+  </template>
+
+  <script>
+
+    Polymer({
+      /**
+       * The `first` attribute should contain the original text
+       *
+       * @attribute first
+       * @type string
+       * @default ''
+       */
+      first: '',
+
+      /**
+       * `second` is the text to diff agains.
+       *
+       * @property second
+       * @type string
+       * @default ''
+       */
+      second: '',
+
+      ready: function() {
+        var dmp = new diff_match_patch();
+        this.diffs = dmp.diff_main(this.first, this.second);
+        dmp.diff_cleanupEfficiency(this.diffs);
+      }
+
+    });
+
+  </script>
+
+</polymer-element>
