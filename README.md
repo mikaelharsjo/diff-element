@@ -17,19 +17,23 @@ See the [component page](http://mikaelharsjo.github.io/diff-element) for more in
 
 ## Contributing
 
-Start a simple web server that ships with Python, using the commands:
+We use [Polyserve](https://github.com/PolymerLabs/polyserve) as your web server to allow canonical paths to
+bower dependencies. install with:
 
-```sh
-python -m SimpleHTTPServer
-```
+    npm install -g polyserve
 
-Or other method using NodeJS:
+And you can run it via:
 
-```sh
-http-server ./
-```
+    polyserve
 
-This starts a web server on port 8000, so browse to `localhost:8000/test/index.html` to run the tests.
+Once running, you can view the component page at
+`http://localhost:8080/components/diff-element/index.html`
+
+
+## Testing Your Element
+
+Simply navigate to:
+`http://localhost:8080/components/diff-element/test/`
 
 ### web-component-tester
 
