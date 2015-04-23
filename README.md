@@ -18,7 +18,7 @@ See the [component page](http://mikaelharsjo.github.io/diff-element) for more in
 ## Contributing
 
 We use [Polyserve](https://github.com/PolymerLabs/polyserve) as your web server to allow canonical paths to
-bower dependencies. install with:
+bower dependencies. Install with:
 
     npm install -g polyserve
 
@@ -33,7 +33,7 @@ Once running, you can view the component page at
 ## Testing Your Element
 
 Simply navigate to:
-`http://localhost:8080/components/diff-element/test/`
+`http://localhost:8080/components/diff-element/test/index.html`
 
 ### web-component-tester
 
