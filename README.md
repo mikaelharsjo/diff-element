@@ -30,7 +30,7 @@ Once running, you can view the component page at
 `http://localhost:8080/components/diff-element/index.html`
 
 
-## Testing Your Element
+## Testing
 
 Simply navigate to:
 `http://localhost:8080/components/diff-element/test/index.html`
