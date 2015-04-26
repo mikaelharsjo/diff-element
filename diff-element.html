@@ -6,14 +6,14 @@ Element that shows diffs between two texts using `google_diff_match_patch`.
 
 ##### Example
 
-    <diff-element first="Good Dog" second="Bad Dog"></diff-element>
+    <diff-element original="Good Dog" new="Bad Dog"></diff-element>
 
 @element diff-element
 @blurb Element that shows diffs between two texts using `google_diff_match_patch`.
 @status alpha
 @homepage http://mikaelharsjo.github.io/diff-element
 -->
-<polymer-element name="diff-element" attributes="first second">
+<polymer-element name="diff-element" attributes="original new">
 
   <template>
 
@@ -39,38 +39,38 @@ Element that shows diffs between two texts using `google_diff_match_patch`.
 
     Polymer({
       /**
-       * The `first` attribute should contain the original text
+       * The `original` attribute should contain the original text
        *
-       * @attribute first
+       * @attribute original
        * @type string
        * @default ''
        */
-      first: '',
+      original: '',
 
       /**
-       * `second` is the text to diff agains.
+       * `new` is the text to diff against.
        *
-       * @attribute second
+       * @attribute new
        * @type string
        * @default ''
        */
-      second: '',
+      new: '',
 
       ready: function() {
         this.performDiff();
       },
 
       performDiff: function() {
-        if (this.first && this.second) {
+        if (this.original && this.new) {
           var dmp = new diff_match_patch();
-          this.diffs = dmp.diff_main(this.first, this.second);
+          this.diffs = dmp.diff_main(this.original, this.new);
           dmp.diff_cleanupEfficiency(this.diffs);
         }
       },
 
       observe: {
-        'first': 'peformDiff',
-        'second': 'performDiff',
+        'original': 'peformDiff',
+        'new': 'performDiff',
       },
 
     });
