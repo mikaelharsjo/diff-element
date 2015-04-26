@@ -57,10 +57,21 @@ Element that shows diffs between two texts using `google_diff_match_patch`.
       second: '',
 
       ready: function() {
-        var dmp = new diff_match_patch();
-        this.diffs = dmp.diff_main(this.first, this.second);
-        dmp.diff_cleanupEfficiency(this.diffs);
-      }
+        this.performDiff();
+      },
+
+      performDiff: function() {
+        if (this.first && this.second) {
+          var dmp = new diff_match_patch();
+          this.diffs = dmp.diff_main(this.first, this.second);
+          dmp.diff_cleanupEfficiency(this.diffs);
+        }
+      },
+
+      observe: {
+        'first': 'peformDiff',
+        'second': 'performDiff',
+      },
 
     });
 
